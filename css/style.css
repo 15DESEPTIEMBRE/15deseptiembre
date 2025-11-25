@@ -1,92 +1,124 @@
-/* ========== VARIABLES GLOBALES ========= */
+
 :root {
     --bg: #e0e0e0;
-    --shadow-dark: #bebebe;
     --shadow-light: #ffffff;
+    --shadow-dark: #bababa;
     --radius: 20px;
-    --padding: 20px;
 }
 
-/* ========== RESET Y CUERPO ========= */
+
+/* ===========================
+
+   =========================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
 body {
     background: var(--bg);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px;
+    font-family: Arial, sans-serif;
 }
 
-/* ========== TITULO ========= */
-.title {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    text-align: center;
-}
 
-/* ========== IMAGENES CONTROLADAS ========= */
-img {
-    width: 100%;
-    max-width: 220px;     /* Tamaño perfecto */
-    border-radius: 15px;
-}
-
-/* ========== CONTENEDOR NEUMORFISTA ========= */
+/* ===========================
+        NEUMORFISMO
+   =========================== */
 .neu {
     background: var(--bg);
     border-radius: var(--radius);
-    padding: var(--padding);
+    padding: 25px;
     box-shadow:
         8px 8px 16px var(--shadow-dark),
         -8px -8px 16px var(--shadow-light);
 }
 
-/* ========== TARJETAS ========= */
-.card {
-    max-width: 350px;
-    margin: 20px 0;
-    text-align: center;
-}
-
-/* ========== MARCO PARA IMAGEN NEUMORFISTA ========= */
 .img-neu {
     background: var(--bg);
-    padding: 15px;
-    border-radius: 18px;
-    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: var(--radius);
     box-shadow:
         6px 6px 12px var(--shadow-dark),
         -6px -6px 12px var(--shadow-light);
+    display: inline-block;
 }
 
-/* ========== TEXTO ========= */
-.text {
-    font-size: 1.1rem;
-    margin-top: 10px;
+
+
+.myclass-pic {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
 }
 
-/* ========== BOTÓN NEUMORFISTA ========= */
-.btn {
+.myclass-imagen {
+    max-width: 260px;
+    border-radius: 15px;
+}
+
+.proyecto img {
+    border-radius: 15px;
+}
+
+
+
+.btn-info {
     background: var(--bg);
+    color: #333;
+    border: none;
     border-radius: var(--radius);
     padding: 12px 25px;
-    margin-top: 20px;
     box-shadow:
         6px 6px 12px var(--shadow-dark),
         -6px -6px 12px var(--shadow-light);
-    border: none;
-    cursor: pointer;
-    transition: 0.2s;
+    transition: 0.2s ease-in-out;
 }
 
-.btn:active {
+.btn-info:active {
     box-shadow:
-        inset 5px 5px 10px var(--shadow-dark),
-        inset -5px -5px 10px var(--shadow-light);
+        inset 6px 6px 12px var(--shadow-dark),
+        inset -6px -6px 12px var(--shadow-light);
 }
+
+
+
+.navbar {
+    background: var(--bg);
+    box-shadow:
+        5px 5px 10px var(--shadow-dark),
+        -5px -5px 10px var(--shadow-light);
+}
+
+
+
+.card {
+    background: var(--bg) !important;
+    border-radius: var(--radius);
+    box-shadow:
+        8px 8px 16px var(--shadow-dark),
+        -8px -8px 16px var(--shadow-light) !important;
+}
+
+.card-header {
+    background: var(--bg) !important;
+    font-weight: bold;
+}
+
+
+
+.proyecto {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow:
+        5px 5px 12px var(--shadow-dark),
+        -5px -5px 12px var(--shadow-light);
+}
+
+
+
+footer {
+    margin-top: 50px;
+    padding: 20px;
+}
+
