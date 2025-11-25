@@ -1,36 +1,92 @@
-/* Fondo general */
-body {
-    background: #e0e0e0;
+/* ========== VARIABLES GLOBALES ========= */
+:root {
+    --bg: #e0e0e0;
+    --shadow-dark: #bebebe;
+    --shadow-light: #ffffff;
+    --radius: 20px;
+    --padding: 20px;
+}
+
+/* ========== RESET Y CUERPO ========= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
 
-/* Tarjetas, cajas, contenedores */
-.neu {
-    background: #e0e0e0;
-    border-radius: 20px;
-    box-shadow:
-        8px 8px 16px #bebebe,
-        -8px -8px 16px #ffffff;
-    padding: 20px;
-    margin: 20px;
+body {
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
 }
 
-/* Botones estilo neumorfismo */
-.button-neu {
-    display: inline-block;
-    background: #e0e0e0;
+/* ========== TITULO ========= */
+.title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* ========== IMAGENES CONTROLADAS ========= */
+img {
+    width: 100%;
+    max-width: 220px;     /* Tamaño perfecto */
     border-radius: 15px;
-    padding: 12px 25px;
+}
+
+/* ========== CONTENEDOR NEUMORFISTA ========= */
+.neu {
+    background: var(--bg);
+    border-radius: var(--radius);
+    padding: var(--padding);
     box-shadow:
-        6px 6px 12px #bebebe,
-        -6px -6px 12px #ffffff;
+        8px 8px 16px var(--shadow-dark),
+        -8px -8px 16px var(--shadow-light);
+}
+
+/* ========== TARJETAS ========= */
+.card {
+    max-width: 350px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* ========== MARCO PARA IMAGEN NEUMORFISTA ========= */
+.img-neu {
+    background: var(--bg);
+    padding: 15px;
+    border-radius: 18px;
+    margin-bottom: 15px;
+    box-shadow:
+        6px 6px 12px var(--shadow-dark),
+        -6px -6px 12px var(--shadow-light);
+}
+
+/* ========== TEXTO ========= */
+.text {
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+/* ========== BOTÓN NEUMORFISTA ========= */
+.btn {
+    background: var(--bg);
+    border-radius: var(--radius);
+    padding: 12px 25px;
+    margin-top: 20px;
+    box-shadow:
+        6px 6px 12px var(--shadow-dark),
+        -6px -6px 12px var(--shadow-light);
+    border: none;
     cursor: pointer;
     transition: 0.2s;
 }
 
-/* Botón al presionar */
-.button-neu:active {
+.btn:active {
     box-shadow:
-        inset 4px 4px 8px #bebebe,
-        inset -4px -4px 8px #ffffff;
+        inset 5px 5px 10px var(--shadow-dark),
+        inset -5px -5px 10px var(--shadow-light);
 }
